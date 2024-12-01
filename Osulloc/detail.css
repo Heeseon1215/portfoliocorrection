@@ -1,0 +1,595 @@
+@charset "utf-8";
+
+/**** font ****/
+/* font-family: 'JejuMyeongjo'; */
+@import url("../assets/styles/jejumyeongjo.css");
+
+
+/* font-family: 'Unna'; */
+@import url("../assets/styles/Unna.css");
+
+
+
+body {
+      color: var(--color-gray-900);
+      font-family: var(--font-main-ko);
+}
+
+
+/***** 공통 css *****/
+/* 로고  변경 */
+header a .main-logo {
+      background: url(../images/main_logo_sub1.svg) no-repeat 50% / 100%; 
+}
+
+/* 헤더 색상 변경 */
+header .gnb-btn .line {
+      background-color: var(--color-sub1-primary);
+}
+
+header.toggle-btn {
+      background-color: var(--color-sub1-primary);
+}
+
+/* 푸터 색상 변경 */
+
+footer {
+      background-color: var(--color-sub1-primary);
+}
+ 
+.title-ac {
+      background-color: var(--color-sub1-primary);
+      color: var(--color-secondary);
+}
+
+.title-ac2 {
+      color: var(--color-sub1-primary);
+}
+
+.subject {
+      font-size: var(--font-main-title-lg);
+      font-family: var(--font-main-en);
+      margin: var(--spacing-xlg) 0 var(--spacing-rg);
+      position: relative;
+      color: var(--color-sub1-primary);
+      font-weight: 600;
+}
+
+.subject::before {
+      content: "";
+      width: 40px; height: 40px;
+      background: url(../images/shinig-line-sub1.svg);
+      margin-bottom: 10px;
+      animation: shin 20s infinite linear;  
+      position: absolute;
+      top: -40px;
+      left: -5px;
+      
+}
+.pr-title {
+      font-size: var(--font-main-title-md);
+      font-weight: 600;
+      padding:  var(--spacing-rg) 0;
+}
+
+.detail-ac {
+      font-weight: 600;
+}
+
+.br {
+      display: block;
+}
+
+/*******  project-title *******/
+.project-title {
+      height: 95vh;
+      grid-template-rows: 2.5fr 1fr;
+      position: relative;
+}
+
+.project-title .title-wrapper {
+      grid-row: 2 / 3;
+      color: var(--color-sub1-primary);
+}
+
+.project-title .title-wrapper .shinig {
+    width: 50px; height: 50px;
+    background-image: url(../images/shining-sub1-01.svg);
+    margin-bottom: 10px;
+    animation: shin 20s infinite linear;  
+}
+
+
+
+.project-title .title-wrapper .title-strong {
+      margin-bottom: 5px;
+      font-weight: 600;
+}
+.project-title .title-wrapper .title-name {
+      font-size: var(--font-main-title-lg);
+      font-weight: 700;
+      line-height: 1.3;
+      margin-bottom: 10px;
+}
+.project-title .title-wrapper .title-text {
+      font-weight: 600;
+      line-height: 1.5;
+}
+.project-title .title-wrapper .title-skill img {width: 20px;  margin-bottom: 4px;}
+
+
+/* 뒤의 큰 글씨 */
+.project-title .title-wrapper .title-big {
+      font-family: var(--font-main-en);
+      font-size: 60px;
+      opacity: 0.2;
+      font-weight: 800;
+      position: absolute;
+      bottom: 10px;
+      z-index: -1;
+} 
+
+
+/* 프로젝트 이미지 */
+.project-title .title-img {
+      position: relative;
+      overflow: hidden;
+}
+
+/* 주변 반짝이 애니메이션 */
+
+.project-title .title-img .shining {
+      background: url(../images/shining-sub1-01.svg) no-repeat 50% / cover;
+      width: 90px; height: 90px;
+      position: absolute;
+      top: 20%;
+      left: 10%;
+      animation: shin1 6s linear infinite;
+}
+
+.project-title .title-img .shiningline {
+      background: url(../images/shinig-line-sub1.svg) no-repeat 50% / cover;
+      width: 42px; height: 42px;
+      position: absolute;
+      top: 40%;
+      right: 10%;
+      animation: shin2 4s linear infinite;
+}
+
+.project-title .title-img .shiningline2 {
+      background: url(../images/shinig-line-sub1.svg) no-repeat 50% / cover;
+      width: 68px; height: 68px;
+      position: absolute;
+      bottom: 2%;
+      right: 10%;
+      animation: shin3 4s linear infinite;
+}
+
+
+.project-title .title-img .img-desktop {
+      width: 78%;
+      transition: 0.8s;
+      transform: rotate(10deg) translateY(80px) translateX(20%);
+      z-index: 1;
+      justify-content: center;
+}
+
+.project-title .title-img .img-desktop:hover {
+      transform:  rotate(-5deg) translateY(60px) translateX(20%); 
+}
+.project-title .title-img .img-mobile {
+      position: absolute;
+      width: 15%; 
+      top: 60%; left: 10%;
+      transition: 0.8s;
+      transform: rotate(-30deg);
+      z-index: 1;
+}
+
+.project-title .title-img .img-mobile:hover {
+      transform:  rotate(-10deg) translateY(-50px);
+      
+}
+
+.project-title .title-img .title-circle {
+      background-color: var(--color-sub1-primary);
+      width: 50%; aspect-ratio: 1 / 1;
+      border-radius: 50%;
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%);
+}
+
+
+/*******  project-overview*******/
+.project-overview {
+      background: url(./images/detail-overview-bg.png) no-repeat 50% / cover;
+      margin-top: var(--spacing-xlg);
+      padding: var(--spacing-rg) 16px;
+}
+
+
+.project-overview .overview-wrapper p {
+      width: 80%;
+      line-height: 1.6;
+      margin-bottom: var(--spacing-xlg);
+}
+
+
+
+/*******  project-goal *******/
+.project-goal {
+      padding-top: var(--spacing-lg);
+}
+.project-goal .goal-wrapper {
+      padding-left: 10px;
+      font-size: var(--font-main-title-rg);
+
+}
+.project-goal .goal-wrapper .goal { margin: var(--spacing-rg) 0; }
+.project-goal .goal-wrapper .goal strong { padding-left: var(--spacing-rg); color: var(--color-sub1-primary); position: relative;}
+.project-goal .goal-wrapper .goal p { padding: var(--spacing-rg); line-height: 1.6; position: relative;}
+.project-goal .goal-wrapper .goal strong::before {
+      content: "";
+      width: 20px; height: 20px;
+      position: absolute;
+      top: 0; left: -10px;
+      background: url(../images/shining-sub1-01.svg) no-repeat 50% / cover;
+}
+
+.project-goal .goal-wrapper .goal p::before {
+      content: "";
+      height: 130px; width: 1.2px;
+      position: absolute;
+      top: 10px; left: 0;
+      background-color: var(--color-sub1-primary);
+}
+
+
+
+/*******  project-keyword *******/
+.project-keyword {
+      background:linear-gradient(#353535,#49663A);
+      color: var(--color-sub1-secondary);
+      margin: var(--spacing-lg) 0;
+      padding: var(--spacing-lg) 16px;
+      position: relative;
+      overflow: hidden;
+}
+.project-keyword .subject{
+      color: var(--color-sub1-secondary);
+}
+
+.project-keyword .subject::before {
+      background: url(../images/shinig-line-sub1-2.svg) no-repeat 50% / 75%;
+     
+}
+
+.project-keyword .pr-title .title-ac2  {
+      color: var(--color-secondary);
+}
+
+.project-keyword  .pr-sub {
+      width: 65%;
+      line-height: 1.8;
+
+}
+
+
+.project-keyword .keyword-wrapper {
+      padding-top: var(--spacing-rg);
+      gap: 10px;
+}
+
+.project-keyword .keyword {
+      width: 30%; aspect-ratio: 1 / 1;
+      margin: var(--spacing-lg) 0;
+      display: grid;
+      place-items: center;
+      color: var(--color-secondary);
+}
+.project-keyword .keyword:nth-child(1)  {
+      background: linear-gradient(rgba(73, 102, 58, 0.7), rgba(73, 102, 58, 0.7)) ,url(./images/track2.png) no-repeat 50% / cover;
+      border-radius: 50%;
+}
+
+.project-keyword .keyword:nth-child(2)  {
+      background: linear-gradient(rgba(73, 102, 58, 0.7), rgba(73, 102, 58, 0.7)) ,url(./images/idx9.jpg) no-repeat 50% / cover;
+      border-radius: 50%;
+}
+.project-keyword .keyword:nth-child(3)  {
+      background: linear-gradient(rgba(73, 102, 58, 0.7), rgba(73, 102, 58, 0.7)) ,url(./images/track4.png) no-repeat 50% / cover;
+      border-radius: 50%;
+}
+
+.project-keyword .shining {
+      width: 130px; height: 130px;
+      background: url(../images/shining-sub1-01-2-01.svg);
+      position: absolute;
+      right: -50px;
+      top: 50px;
+      animation: shin2 10s infinite linear;  
+}
+
+.project-keyword .shiningline {
+      width: 40px; height: 40px;
+      background: url(../images/shinig-line-sub1-2.svg);
+      position: absolute;
+      left: -10px;
+      bottom: 30px;
+      animation: shin 10s infinite linear ;  
+}
+
+
+/*******  DESGIN SYSTEM  *******/
+.project-design {
+      padding: var(--spacing-rg) 16px;
+}
+
+.project-design h4 {
+      font-family: var(--font-main-en);
+      font-weight: 800;
+      margin: 10px 0 ;
+}
+
+
+/* 타이포 */
+.project-design .typo-ko{
+      font-family: "JejuMyeongjo", 'Courier New', Courier, monospace, Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", serif;
+      justify-content: space-between;
+      grid-template-columns: 1fr 2.5fr;
+      align-items: center;
+      padding: var(--spacing-sm) 0;
+}
+
+
+.project-design .typo-en{
+      font-family: "Unna", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", Arial, serif; 
+      justify-content: space-between;
+      grid-template-columns: 1fr 2.5fr;
+      align-items: center;
+      padding: var(--spacing-sm) 0;
+}
+
+
+.project-design .design-typo strong {
+      color: #888888;
+      font-size: 18px;
+      font-weight: normal;
+}
+
+.project-design .design-typo p {
+      font-size: var(--font-main-title-lg);
+
+}
+
+/* 간격 */
+
+.design-spacing .spacing-wrapper {
+      justify-content: space-evenly;
+      text-align: center;
+      margin-bottom: var(--spacing-sm);
+      position: relative;
+}
+.design-spacing .spacing-wrapper em {
+      padding-top: var(--spacing-xlg);
+      margin-top: var(--spacing-sm);
+      font-style: normal;
+      font-weight: 600;
+      margin-bottom: 15px;
+      display: block;
+      color: #888888;
+}
+.design-spacing .spacing-wrapper::after {
+      content: "";
+      border-bottom: #888888 1.8px dashed;
+      width: 90%;
+      position: absolute;
+      bottom: 25px;
+}
+.design-spacing .spacing-wrapper .spacing1 {
+      margin-right: 10px;
+}
+
+.design-spacing .spacing-wrapper .spacing{
+      position: relative;
+}
+
+.design-spacing .spacing-wrapper .spacing::after {
+      content: "";
+      position: absolute;
+      background-color: var(--color-sub1-primary);
+      aspect-ratio: 1/1;
+      bottom: 60px; left: 50%; transform: translateX(-50%);
+}
+.design-spacing .spacing-wrapper .spacing1::after {width: 60px;}
+.design-spacing .spacing-wrapper .spacing2::after {width: 40px;}
+.design-spacing .spacing-wrapper .spacing3::after {width: 30px;}
+.design-spacing .spacing-wrapper .spacing4::after { width: 24px;}
+.design-spacing .spacing-wrapper .spacing5::after { width: 22px;}
+.design-spacing .spacing-wrapper .spacing6::after {width: 12px;}
+
+/* 컬러 */
+
+
+.design-color h4{
+      margin: var(--spacing-rg) 0;
+}
+.design-color .grid-container   {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      text-align: center;
+
+}
+.design-color .grid-container .idx {
+      height: 15vh;
+      padding: var(--spacing-sm);
+}
+.design-color .grid-container .idx1 {
+      grid-column: 1 / 3;
+      background-color: #1D360F;
+      color: var(--color-secondary);
+      border-radius: 12px 12px 0 0;
+}
+.design-color .grid-container .idx2 {
+      background-color: #244413;
+      color: var(--color-secondary);
+}
+.design-color .grid-container .idx3 {
+      background-color: #aab654;
+      color: var(--color-secondary);
+}
+.design-color .grid-container .idx4 {
+      background-color: #100d0d;
+      color: var(--color-secondary);
+      border-radius:  0 0  0 12px ;
+}
+.design-color .grid-container .idx5 {
+      background-color: #fff;
+      border-radius:  0 0  12px 0;
+}
+
+
+
+
+/*******  PUBLISHING *******/
+.project-pub {
+      background-color: var(--color-sub1-primary);
+      margin: var(--spacing-lg) 0;
+      padding: var(--spacing-lg) 16px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+}
+
+.project-pub .subject {
+      color: var(--color-secondary);
+      text-align: left;
+}
+
+
+.project-pub .subject::before {
+      background: url(../images/shinig-line-2.svg) no-repeat 50% / 75%; 
+}
+     
+
+.project-pub .pub-wrapper strong {
+      background-color: var(--color-secondary);
+      padding: 5px 20px;
+      margin: var(--spacing-md) 0 var(--spacing-sm);
+      display: block;
+      border-radius: 20px 20px;
+}
+.project-pub .pub-wrapper p { 
+      color: var(--color-secondary); 
+      width: 70%; margin: 0 auto; 
+      line-height: 1.6;}
+
+/* 꾸밈요소 */
+.project-pub .shining {
+      position: absolute;
+      background: url(../images/shining-02.svg) no-repeat 50% / cover;
+      width: 50px; height: 50px;
+      top: 15%; right: 10px;
+      animation: shin 20s infinite linear;  
+ 
+}
+.project-pub .shining2 {
+      position: absolute;
+      background: url(../images/shining-02.svg) no-repeat 50% / cover;
+      width: 30px; height: 30px;
+      bottom: 22%; left: 10px;
+      animation: shin 10s infinite linear;  
+ 
+}
+
+/*******  ROBLEM & SOLUTION *******/
+.project-prso {
+      padding: var(--spacing-rg) 16px;
+}
+
+.project-prso .prso .prso-title {
+      line-height: 1.6;
+}
+
+
+.project-prso .prso .info {
+      line-height: 1.6;
+      color: #888888;
+}
+
+.project-prso .des {
+      line-height: 1.6;
+      font-weight: 600;
+      color: var(--color-sub1-primary);
+      margin: 15px 0;
+      gap: 30px;
+      grid-template-columns: 1fr 8fr;
+}
+.project-prso .arrow{
+     background: url(../images/line-arrow.svg) no-repeat 50% / 90%;
+      width: 100%; aspect-ratio: 2 / 1;
+     align-self: flex-start;
+}
+.project-prso p {
+      margin-bottom: var(--spacing-rg);
+}
+.project-prso img {
+      margin-bottom: var(--spacing-md);
+}
+
+
+/******* RESULT *******/
+.project-result .review-wrapper {
+      color: var(--color-sub1-primary);
+      font-size: var(--font-main-title-md);
+      font-weight: 600;
+      padding-bottom: var(--spacing-rg);
+}
+
+.project-result .review li strong {
+      color: var(--color-sub1-primary);
+      font-weight: 600;
+      margin-bottom: var(--spacing-sm);
+      display: block;
+}
+
+.project-result .review li p {
+      line-height: 1.6;
+}
+.project-result .review li {
+      margin: var(--spacing-sm) auto var(--spacing-rg);
+      width: 90%;
+}
+
+.project-btn {
+      place-content: center;
+      margin-top: var(--spacing-rg);
+      margin-bottom: var(--spacing-xlg);
+}
+.project-btn a {
+      width: 200px;
+      padding: 10px 20px;
+      font-weight: 500;
+      color: var(--color-sub1-primary);
+      border: 2px solid var(--color-sub1-primary);
+      border-radius: 20px ;
+      justify-content: space-between;
+
+}
+.project-btn .arrow{
+      background: url(../images/line-arrow.svg) no-repeat 50% / 90%;
+      width: 30px;height: 20px;
+}
+
+
+
+/*******  project-all-img *******/
+.all-img {
+      height: 80vh;
+      background: url(./images/detail-all-img.png) no-repeat 0% / cover;
+}
+
+
+
+

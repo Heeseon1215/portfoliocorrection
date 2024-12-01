@@ -1,0 +1,113 @@
+@charset "utf-8";
+
+
+/**** css 변수 ****/
+:root {
+
+      /* 폰트 */
+      --font-main-ko: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+
+      --font-main-en: "PPNeueMontreal", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", Arial, sans-serif;
+
+
+      /* 폰트 크기 */
+      --font-main-title-xxlg: 3.5rem;/*56px*/
+      --font-main-title-xlg: 1.875rem;/*30px*/
+      --font-main-title-lg: 1.5625rem;/*25px*/
+      --font-main-title-md: 1.25rem;/*20px*/
+      --font-main-title-rg: 1.125rem;/*18px*/
+      --font-main-title-sm: 0.75rem;/*12px*/
+
+       /* 색상 */
+      --color-primary: #FF4B1E;
+      --color-primary-second: #FF9E86;
+      --color-secondary: #FFFBEA;
+
+            
+      --color-black: #222222;
+      --color-gray-900 : #3D3D3D;
+      --color-white: #ffffff;
+
+      /* 서브페이지 색상 */
+      /* 오설록 */
+      --color-sub1-primary : #49663A;
+      --color-sub1-secondary : #AAB654;
+
+
+
+
+
+
+      /* border */
+      --border-btm-primary: 2px solid var(--color-primary);
+      --border-btm-primary-skill: 2px solid var(--color-primary);
+
+      /* spacing */
+      --spacing-xlg: 4.5rem;/* 72px */
+      --spacing-lg: 3.125rem;/* 50px */
+      --spacing-md: 2rem;/* 32px */
+      --spacing-rg: 1.5rem;/* 24px */
+      --spacing-sm: 1rem;/* 16px */
+      --spacing-xsm: 0.75rem;/* 12px */
+
+}
+
+
+
+/**** global style ****/
+/* 부드러운 스크롤 및 커서 */
+html {
+      scroll-behavior: smooth;
+}
+
+/* 드래그 */
+html ::selection {
+      background-color: var(--color-primary);
+      color: var(--color-secondary);
+    }
+
+
+/* flex 및 grid */
+.flex-container {
+      display: flex;
+}
+.grid-container {
+      display: grid;
+}
+
+/* border */
+.border-btm {
+      border-bottom: var(--border-btm-primary);
+}
+
+/* padding */
+.padding-basic {
+      padding: 0 var(--spacing-sm);
+}
+
+/* 제목 */
+.main-title {
+      font-family: var(--font-main-en);
+      font-size: var(--font-main-title-xlg);
+      font-weight: 500;
+      position: relative;
+      margin-top: var(--spacing-xsm);
+}
+    
+.main-title::before {
+content: "";
+background-color: #ddd;
+width: 36px; aspect-ratio:  1 / 1;
+
+position: absolute;
+top: -50px; left: 0;
+background: url(../../images/shining.svg) no-repeat 50% / 100% ;
+animation: shin 10s  infinite linear;
+}
+
+
+/**** body ****/
+body {
+      background-color: var(--color-secondary);
+      color: var(--color-primary);
+}

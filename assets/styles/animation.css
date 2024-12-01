@@ -1,0 +1,20 @@
+@charset "utf-8";
+
+@keyframes shin {
+      100% {transform: rotate(360deg);}
+}
+
+@keyframes shin1 {
+      50% { opacity: 0;}
+      100% {transform: rotate(360deg); opacity: 1; }
+}
+@keyframes shin2 {
+      0% { opacity: 1;}
+      50% { opacity: 0; }
+      100% { transform: rotate(-240deg); opacity: 1;}
+}
+
+@keyframes shin3 {
+      30% { opacity: 0;}
+      100% {transform: rotate(-360deg); opacity: 1;}
+}

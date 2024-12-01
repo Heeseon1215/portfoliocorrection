@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+  <title>여성 생리 달력</title>
+
+  <!-- reset.css -->
+  <link rel="stylesheet" href="../../assets/styles/reset.min.css">
+
+  <!-- favicon -->
+  <link rel="icon" type="image/png" href="../../images/favicon/android-icon-48x48.png" sizes="48x48">
+  <link rel="icon" type="image/svg+xml" href="../../images/favicon/favicon.svg">
+  <link rel="shortcut icon" href="../../images/favicon/favicon.ico">
+  <link rel="manifest" href="../../images/favicon/site.webmanifest">
+
+  <!-- global style -->
+  <link rel="stylesheet" href="../../assets/styles/common.css">
+  <!-- layout: header, footer style -->
+  <link rel="stylesheet" href="../../assets/styles/layout.css">
+  <!-- css -->
+  <link rel="stylesheet" href="./project3.css">
+
+  <!-- lottie -->
+  <script src="../../assets/scripts/lottie.min.js"></script>
+
+  <!-- js -->
+  <script src="../../assets/scripts/jquery-3.7.1.min.js"></script>
+  <script defer src="../../assets/scripts/index.js"></script>
+
+</head>
+
+<body>
+
+  <!-- header -->
+  <header class="header flex-container padding-lg"><a href="../../index.html">
+      <h1 class="logo" cursor-class="link1">logo</h1>
+    </a>
+
+    <!-- nav -->
+    <nav class="menu header-nav padding-sm" cursor-class="link1">
+      <input type="checkbox" class="menu-open" name="menu-open" id="menu-open">
+      <label class="menu-open-button" for="menu-open">
+        <span class="lines line-1"></span>
+        <span class="lines line-2"></span>
+        <span class="lines line-3"></span>
+      </label>
+
+      <a href="#" class="menu-item menu-aboutme">MAIN</a>
+      <a href="#" class="menu-item menu-aboutme">PROJECT</a>
+      <a href="#" class="menu-item menu-aboutme">SKILLS</a>
+      <a href="#" class="menu-item menu-aboutme">ABOUTME</a>
+      <a href="#" class="menu-item menu-contact">CONTACT</a>
+    </nav>
+  </header>
+
+
+  <!-- project-title -->
+  <div class="project-title margin-lg">
+    <div class="project-title-wrapper">
+      <div class="project-title-design-wrapper">
+        <p class="project-title-design">UXUI RENEWAL</p>
+        <strong>한눈에 확인하는 월경 주기</strong>
+        <h2 class=" project-title-name">여성 생리 달력</h2>
+        <!-- 아래 스킬 이미지와 설명들 -->
+        <div class="project-title-explanation">
+          <div class="project-title-skill">
+            <img src="../../images/skill-icons_figma.svg" alt="figma">
+            <img src="../../images/skill-icons_illust.svg" alt="illust">
+          </div>
+          <p class="project-title-explanation-text">
+            팀 프로젝트
+            <br>
+            2024.09.10 - 2024. 10. 15
+            <br>
+            캐릭터, 발표자료, 프로토 타입 제작
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="project-title-img">
+      <!-- 배란이가 뛰는 모습 -->
+      <div id="title-character"></div>
+      <img src="./images/project3_title_img.png" alt="내캘린더메인이미지">
+    </div>
+    <!-- 뒤에 들어가는 큰 제목 -->
+    <p class="project-title-big-name">MY<br>CALENDER</p>
+  </div>
+
+
+  <!-- project-overview -->
+  <div class="project-overview">
+    <div class="project-overview-wrapper">
+      <h2 class="project-subject">overview</h2>
+      <div class="project-overview-title">
+        <h3>이번달 월경일은 언제지..
+          <br>이제 <span>걱정 없이 한눈에 확인</span>하세요!
+        </h3>
+      </div>
+      <div class="project-overview-explanation">
+        <p>여성 생리달력은 <span>월경주기와 배란일, 가임기를 쉽게 예측하고 관리</span>할 수 있도록
+          <br>도와주는 어플리케이션입니다. 여성생리달력 사용자의 이야기를 들어보고
+          <br>불편사항을 반영해 더욱 편리하게 <span>리뉴얼</span>했습니다.
+        </p>
+      </div>
+    </div>
+  </div>
+  
+  <!-- project-background -->
+  <div class="project-background ">
+    <div class="project-background-wrapper margin-lg">
+      <h2 class="project-subject">background</h2>
+      <div class="project-background-title">
+        <h3><span>20대와 30대 여성</span>들의
+          <br>월경검색 비율이 높아요
+        </h3>
+        <div class="project-background-explanation">
+          <p>연령별 검색 비율을 살펴보면 20대와 30대의 검색 비율이 높고
+            <br>생리 주기를 계산하는 방법과 불규칙한 생리주기에 대해 궁금증을 가지고 있습니다.
+          </p>
+        </div>
+        <div class="project-background-explanation-img">
+          <img src="./images/project3_background_1.png" alt="20대와 30대의 검색 비율">
+          <img src="./images/project3_background_2.png" alt="검색키워드">
+        </div>
+        <p class="
+      source">블랙키위_검색키워드</p>
+      </div>
+
+    </div>
+  </div>
+  <!-- project-overview-ins -->
+  <div class="project-overview-ins">
+    <!-- project-deskreserach -->
+    <div class="project-deskresearch  margin-lg">
+      <h2 class="project-subject">DESKRESERACH</h2>
+      <div class="project-deskresearch-wrapper">
+        <h3 class="project-deskresearch-title">
+          <span>여성 생리 달력</span>에 품고 있는
+          <br>
+          <span>사용자들의 이야기</span>를 들어봤어요
+        </h3>
+      </div>
+      <div class="project-deskresearch-user">
+        <ul class="project-deskresearch-user-messeage">
+          <li>정확한 통계를 알려주는게 <br> 너무 좋아요</li>
+          <li>복잡한 인터페이스가 너무 불편해요</li>
+          <li>어플 이름이 내 캘린더로 보여서<br>사생활 보호가 되어 좋아요!</li>
+          <li>아이콘도 혼동되고 오래전 디자인 같아요</li>
+        </ul>
+      </div>
+
+    </div>
+    <!-- project-uxvision -->
+    <div class="project-uxvision  margin-lg">
+      <h2 class="project-subject">UX VISION</h2>
+      <div class="project-uxvision-wrapper">
+        <div class="project-uxvision-introduce">
+          <h3 class="project-uxvision-title">
+            <span>한눈에 보이는</span>
+            <strong><span>월경 주기</span> 추적기</strong>
+          </h3>
+          <div class="project-uxvision-asistobe">
+            <h3 class="project-uxvision-asis-title">as is</h3>
+            <ul class="project-uxvision-asis">
+              <li>사용성이 떨어지는 레이아웃</li>
+              <li>메인에서만 이동 가능한 내비게이션</li>
+              <li>전체적인 도표 확인이 불가능</li>
+              <li>트렌드에 맞지 않는 디자인</li>
+            </ul>
+            <h3 class="project-uxvision-tobe-title">to be</h3>
+            <ul class="project-uxvision-tobe">
+              <li>캘린더 활용으로 한눈에 파악 가능</li>
+              <li>하단 탭 내비게이션으로 편리성 상승</li>
+              <li>사용자가 보기 편한 막대 그래프 활용</li>
+              <li>트렌드에 맞는 디자인 및 컨셉 변경</li>
+            </ul>
+          </div>
+          <img src="./images/project3_uxvision_img.png" alt="ux vision">
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- project-ia -->
+  <div class="project-ia">
+    <h2 class="project-subject">IA 구조도</h2>
+    <div class="project-ia-wrapper margin-lg">
+      <img src="./images/project3_IA_img.png" alt="IA 구조도">
+    </div>
+  </div>
+
+  <!-- project-workflow -->
+  <div class="project-workflow">
+    <h2 class="project-subject">WORK FLOW</h2>
+    <div class="project-workflow-wrapper">
+      <img src="./images/project3_workflow_img.png" alt="워크플로우">
+    </div>
+  </div>
+
+  <!-- project-designsystem -->
+  <div class="project-designsystem margin-lg">
+    <h2 class="project-subject">DESGIN SYSTEM</h2>
+    <div class="project-designsystem-wrapper">
+      <div class="project-designsystem-title">
+        <h4>TYPOGRAPHY</h4>
+        <p>Pretendard</p>
+        <h3>내 캘린더</h3>
+      </div>
+      <div class="project-designsystem-border">
+        <h4>BORDER</h4>
+        <div class="project-designsystem-border-box1 border-box">
+          <p>Round:16px<br>주요 컨텐츠 상자</p>
+        </div>
+        <div class="project-designsystem-border-box2 border-box">
+          <p>Round:32px<br>Button</p>
+        </div>
+      </div>
+      <div class="project-designsystem-color">
+        <p class="index1">
+          <strong>PRIMARY</strong>
+          <span>#FF9900</span>
+        </p>
+        <p class="index2">
+          <strong>SECONDARY</strong>
+          <span>#AEDA74</span>
+        </p>
+        <p class="index3">
+          <strong>SECONDARY</strong>
+          <span>#EF3E41</span>
+        </p>
+        <p class="index4">
+          <strong>BLACK </strong>
+          <span>#000</span>
+        </p>
+        <p class="index5">
+          <strong>WHITE</strong>
+          <span>#FFF</span>
+        </p>
+      </div>
+
+      <div class="project-designsystem-tapbar">
+        <h4>TAPBAR</h4>
+        <img src="./images/project3_tapbar_img.png" alt="탭바">
+      </div>
+
+    </div>
+  </div>
+
+  <!-- prototype-title -->
+  <div class="prototype-title ">
+    <div class="prototype-title-wrapper ">
+      <div class="prototype-title-wrapper-txt">
+        <p>더 편한 월경 관리 어플</p>
+        <strong>여성 생리 달력</strong>
+      </div>
+      <img src="./images/prototype3-title_img.png" alt="프로토타입">
+    </div>
+  </div>
+
+  <!-- prototype-home -->
+  <div class="prototype-all">
+    <div class="prototype-home padding-lg">
+      <h2 class="prototype-subject">HOME</h2>
+      <div class="prototype-home-wrapper">
+        <div class="prototype-home-txt">
+          <h3><span>월경주기를 한눈에 확인</span>해서
+            <br>더 손쉽게 월경주기를 관리하세요!
+          </h3>
+          <p>
+            기존의 제공중인 서비스 파악이 어렵고 사용성이 떨어지는 레이아웃을 바꿔
+            <br>사용자가 어플을 더 쉽게 파악하고 이용할 수 있도록 제작했습니다.
+          </p>
+        </div>
+
+        <!-- asis-tobe -->
+        <div class="prototype-home-asistobe">
+          <div class="prototype-home-left">
+            <div class="prototype-home-left-ex1">
+              <img src="./images/prototype-home-ex.svg" alt="가임기와 생리일 배란이">
+            </div>
+            <div class="prototype-home-left-ex2">
+              <strong>오늘의 나의 몸상태는?</strong>
+              <p>어플 접속 시 오늘의 상태와 주의 사항에 <br> 대한 안내를 받을 수 있습니다.</p>
+            </div>
+            <div class="prototype-home-left-ex3">
+              <strong>AS-IS</strong>
+              <img src="./images/prototype-home-asis.png" alt="as-is">
+            </div>
+          </div>
+          <div class="prototype-home-center">
+            <strong>TO-BE</strong>
+            <img src="./images/prototype-home-tobe.png" alt="to-be">
+          </div>
+          <div class="prototype-home-right">
+            <div class="prototype-home-right-ex1">
+              <img src="./images/prototype-home-ex2.svg" alt="이번달 주기 예측">
+              <strong>스펙트럼 형태의 주기 예측 그래프</strong>
+              <p>주기 예측 그래프를 통해 이번달 예상주기와 <br> 가임기, 배란일을 한눈에 확인할 수 있습니다.</p>
+            </div>
+            <div class="prototype-home-right-ex2">
+              <strong>내비게이션으로 간편히 이동</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- prototype-report -->
+    <div class="prototype-report padding-lg">
+      <div class="prototype-reprt-wrapper-wra">
+        <h2 class="prototype-subject">REPORT</h2>
+        <div class="prototype-report-wrapper">
+          <div class="prototype-report-txt">
+            <h3>리포트를 통해 내 상태를 실시간으로 파악하세요!</h3>
+          </div>
+          <div class="prototype-report-center-wrapper">
+            <div class="prototype-report-left">
+              <div class="prototype-report-left-ex1">
+                <strong>사용자 위험 등급 안내</strong>
+                <p>월경 분석을 통해 현재 등급을 파악하고 평균<br> 월경 기간과 주기를 안내해드립니다.</p>
+              </div>
+              <div class="prototype-report-left-ex2">
+                <strong>AS-IS</strong>
+                <img src="./images/prototype-report-asis.png" alt="REPORT-ASIS">
+              </div>
+            </div>
+            <div class="prototype-report-center">
+              <strong>TO-BE</strong>
+              <img src="./images/prototype-report-center.png" alt="report">
+            </div>
+            <div class="prototype-report-right">
+              <strong>보기 편한 그래프</strong>
+              <p>기간과 주기 한눈에 파악 및 변화 체크 가능
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- prototype-question -->
+  <div class="prototype-question">
+    <img src="./images/prototype3_question_img.png" alt="질문">
+    <p>월경 관련 이야기를 들을 수 있는 <br>곳은 없을까요?</p>
+  </div>
+
+  <!-- prototype-community -->
+  <div class="prototype-community">
+    <h2 class="prototype-subject">COMMUNITY</h2>
+
+    <div class="prototype-community-wrapper">
+      <div class="prototype-community-txt">
+        <h3><span>매거진과 커뮤니티</span>를 통해
+          <br>비밀 이야기를 나눠보세요
+        </h3>
+        <p>
+          누구와도 이야기 하지 못했던 나만의 고민, 알고싶은 정보들
+          <br>이제 고민하지 마시고 여성 생리 달력에서 해결하세요!
+        </p>
+      </div>
+
+      <div class="prototype-community-img">
+        <img src="./images/prototype_community_list.png" alt="커뮤니티리스트">
+        <img src="./images/prototype_community_phon.png" alt="커뮤니티 폰 목업">
+        <div class="prototype-community-img-mg">
+          <img src="./images/prototype_community_mg1.png" alt="커뮤니티 매거진1">
+          <img src="./images/prototype_community_mg2.png" alt="커뮤니티 매거진2">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- prototype-logo -->
+  <div class="prototype-logo">
+    <img src="./images/prototype-logo.png" alt="배란이">
+  </div>
+
+  <!-- prototype-review -->
+  <div class="prototype-review margin-lg">
+    <h2 class="project-subject">REVIEW</h2>
+    <div class="prototype-review-list-wrapper">
+      <ul class="prototype-review-list">
+        <!-- 부족했던 부분 -->
+        <li>
+          <!-- 타이틀 -->
+        <li class="main-skill-list-wrapper">
+          <a href="#none" class="grid-container">
+            <strong>01</strong>
+            <span class="prototype-review-list-title">부족했던 부분</span>
+            <div id="shining2-1" class="shininglist"></div>
+          </a>
+          <!-- 안의내용 -->
+          <ul class="prototype-review-list-info hide">
+            <li>
+              <strong>디자인에 치중한 와이어 프레임 작업</strong>
+              <p>정보의 배치보다 디자인에 치중하여 추후 프로토타입 제작 시 정보를 추가하거나 수정하는 부분 이 많았습니다.</p>
+            </li>
+            <li>
+              <strong>디자인 스타일 가이드 미비</strong>
+              <p>초기 스타일 가이드 작성이 미흡하여 작업 중 잦은 수정이 필요했습니다.</p>
+            </li>
+            <li>
+              <strong>시간 관리의 어려움</strong>
+              <p>메인 페이지 제작에 많은 시간을 소요하여 다른 페이지의 완성도가 상대적으로 낮았습니다.</p>
+            </li>
+            <li>
+              <strong>의견 전달력 부족</strong>
+              <p>의견을 피력하는 부분에서 개선의 필요성을 인식하게 되었습니다.</p>
+            </li>
+          </ul>
+        </li>
+
+        <!-- 잘했던 부분 -->
+        <li>
+          <!-- 타이틀 -->
+        <li class="main-skill-list-wrapper">
+          <a href="#none" class="grid-container">
+            <strong>02</strong>
+            <span class="prototype-review-list-title">잘했던 부분</span>
+            <div id="shining2-2" class="shininglist"></div>
+          </a>
+          <!-- 안의내용 -->
+          <ul class="prototype-review-list-info hide">
+            <li>
+              <strong>팀원들과의 협력을 통한 캐릭터 제작</strong>
+              <p>캐릭터 제작에 많은 난관이 있었으나 팀원들과의 협력을 통해 적합한 캐릭터를 제작하여 브랜딩 을 강화할 수 있었습니다.</p>
+            </li>
+            <li>
+              <strong>프로덕트 전략 반영</strong>
+              <p>초기 프로덕트 전략에서 벗어나지 않는 디자인을 유지하려는 노력을 통해 일관성 있는 결과물을 완성하였습니다.</p>
+            </li>
+            <li>
+              <strong>피드백 수용</strong>
+              <p>팀원들의 피드백을 수용하고 실수를 인정하며 개선해 나가는 과정을 통해 협력의 중요성을 체감 하게 되었습니다.</p>
+            </li>
+          </ul>
+        </li>
+
+        <!-- 배운점 -->
+        <li>
+          <!-- 타이틀 -->
+        <li class="main-skill-list-wrapper">
+          <a href="#none" class="grid-container">
+            <strong>03</strong>
+            <span class="prototype-review-list-title">배운점</span>
+            <div id="shining2-3" class="shininglist"></div>
+          </a>
+          <!-- 안의내용 -->
+          <ul class="prototype-review-list-info hide">
+            <li>
+              <strong>계획 관리의 중요성</strong>
+              <p>디자인 작업 시작 시 역할 분담이 명확하지 않아 팀원 모두가 메인 페이지 가이드라인 작업에 집중하게 되었고, 다양한 아이디어를 조율하는 데 시간이 많이 소요되었습니다. 이로 인해
+                작업이 지연되고 프로젝트에 차질이 발생했으며, 역할 분배와 일정 세분화의 중요성을 깨닫게 되었습니다.</p>
+            </li>
+            <li>
+              <strong>시각적 배치의 중요성</strong>
+              <p>디자인 작업에서 모든 정보를 무작위로 강조하여 배치한 결과, 사용자들이 중요한 기능을 인식하기 어렵다는 피드백을 받았습니다. 이를 통해 시각적 아름다움보다 정보의 우선순위에 따라
+                배치하는 것이 중요하며, 중요한 정보는 직관적으로 잘 드러나야 한다는 점을 배웠습니다.</p>
+            </li>
+            <li>
+              <strong>팀원들과 소통하는 방법</strong>
+              <p>디자인 진행 중 팀원들과 의견 충돌이 있었으나 명확한 피드백 부족으로 잘못된 방향으로 진행되는 경우가 있었습니다. 하지만 이후 캐릭터 디자인에서는 팀원들과 논의를 통해 프로젝트에
+                적합한 캐릭터를 완성할 수 있었습니다. 이를 통해 의견 조율의 중요성을 깨닫고, 후반부에는 개선하여 팀원들과 소통을 통해 더 나은 프로토타입을 제작했습니다.</p>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="project-go-to">
+        <li><a href="#" target="_blank">프로토타입 보러가기</a></li>
+        <li><a href="#" target="_blank">발표 자료 보러가기</a></li>
+        <li><a href="#" target="_blank">프로젝트 완료보고서 보러가기</a></li>
+      </ul>
+    </div>
+  </div>
+
+
+
+  <!-- prototype-images -->
+  <div class="prototype-images"></div>
+
+  <!-- footer -->
+  <footer class="footer padding-lg">
+
+    <div class="lottie-img-footer " id="rabbit2" cursor-class="link2"><a
+        href="https://small-slug-1ef.notion.site/12358b8e394380f3b004f47d72bd5586?pvs=4" target="_blank"></a></div>
+    <div class="footer-info">
+      <p>contact</p>
+      <h3>skgmltjs01@naver.com</h3>
+      <ul class="footer-info-list">
+        <li cursor-class="link2"><a href="https://github.com/Heeseon1215" target="_blank">github <img
+              src="../../images/arrow_next.svg" alt="화살표"></a></li>
+        <li cursor-class="link2"><a href="https://github.com/Heeseon1215/study" target="_blank">기록일지 <img
+              src="../..//images/arrow_next.svg" alt="화살표"></a></li>
+        <li cursor-class="link2"><a href="https://www.notion.so/STUDY-RECORD-12d58b8e39438079bce4d47de934e2ca"
+            target="_blank">study <img src="../../images/arrow_next.svg" alt="화살표"></a></li>
+      </ul>
+    </div>
+    <div class="name-wrapper ">
+      <p class="name">NA HEE SEON</p>
+    </div>
+  </footer>
+
+
+  <!-- cursor -->
+  <div id="cursor">
+    <div class="cursor-circle"></div>
+  </div>
+
+
+<script>
+  //lottie 스크립트
+// shining2
+// 함수로 Lottie 애니메이션을 로드 및 재사용
+function loadLottieAnimation(shining2) {
+  lottie.loadAnimation({
+    container: document.getElementById(shining2),
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: './images/lottie_img/shining2.json'
+  });
+}
+// 각 컨테이너에 애니메이션 추가
+loadLottieAnimation('shining2-1');
+loadLottieAnimation('shining2-2');
+loadLottieAnimation('shining2-3');
+loadLottieAnimation('shining2-4');
+loadLottieAnimation('shining2-5');
+loadLottieAnimation('shining2-6');
+loadLottieAnimation('shining2-7');
+loadLottieAnimation('shining2-8');
+loadLottieAnimation('shining2-9');
+
+
+// 함수로 Lottie 애니메이션을 로드 및 재사용
+function shinging2(shiningAll) {
+  lottie.loadAnimation({
+    container: document.getElementById(shiningAll),
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: './images/lottie_img/shiny.json'
+  });
+}
+// 각 컨테이너에 애니메이션 추가
+shinging2('shiningAll1');
+shinging2('shiningAll2');
+shinging2('shiningAll3');
+shinging2('shiningAll4');
+shinging2('shiningAll5');
+
+
+
+// footer-rabbit
+const rabbit2 = lottie.loadAnimation({
+  container: document.getElementById('rabbit2'),
+  renderer: 'svg',
+  loop: true,
+  autoplay: true,
+  path: './images/lottie_img/rabbit2.json'
+});
+
+
+
+
+// 커서
+const MOUSE_POSITION = { x: -100, y: -100 }; // 마우스 포인터의 좌표
+const CURSOR_POSITION = { x: 0, y: 0 }; // 커서의 좌표
+const SPEED = 0.1; // 따라가는 속도 (0 ~ 1 사이의 값)
+
+const cursor = document.querySelector('#cursor');
+const cursorCircle = cursor.querySelector('.cursor-circle');
+
+const updateCoordinates = e => {
+  MOUSE_POSITION.x = e.clientX;
+  MOUSE_POSITION.y = e.clientY;
+}
+
+function getAngle(diffX, diffY) {
+  return Math.atan2(diffY, diffX) * 180 / Math.PI;
+}
+
+function getSqueeze(diffX, diffY) {
+  const distance = Math.sqrt(
+    Math.pow(diffX, 2) + Math.pow(diffY, 2)
+  );
+
+  const maxSqueeze = 1; // 원이 찌그러질 수 있는 수치의 최대값 설정 (낮게 설정하면 그 설정값 이상으로는 뭉개지지 않음)
+  const accelerator = 1000; // 원의 찌그러짐 수치 설정 (낮을수록 많이 찌그러짐)
+
+  return Math.min(distance / accelerator, maxSqueeze);
+}
+
+
+const updateCursor = () => {
+  const diffX = Math.round(MOUSE_POSITION.x - CURSOR_POSITION.x);
+  const diffY = Math.round(MOUSE_POSITION.y - CURSOR_POSITION.y);
+
+  CURSOR_POSITION.x += diffX * SPEED;
+  CURSOR_POSITION.y += diffY * SPEED;
+
+  const angle = getAngle(diffX, diffY);
+  const squeeze = getSqueeze(diffX, diffY);
+
+  // const scale = 'scale(' + (1 + squeeze) + ', ' + (1 - squeeze) +')';
+  const scale = `scale(${1 + squeeze}, ${1 - squeeze})`;
+
+  // const rotate = 'rotate(' + angle +'deg)';
+  const rotate = `rotate(${angle}deg)`;
+
+  // const translate = 'translate3d(' + CURSOR_POSITION.x + 'px ,' + CURSOR_POSITION.y + 'px, 0)';
+  const translate = `translate3d(${CURSOR_POSITION.x}px, ${CURSOR_POSITION.y}px, 0`;
+
+  cursor.style.transform = translate;
+  cursorCircle.style.transform = rotate + scale;
+};
+
+
+// 링크별 클래스 제어 추가
+const cursorModifiers = document.querySelectorAll('[cursor-class]');
+onCursorToggle(cursorModifiers);
+
+function onCursorToggle(cursorModifiers) {
+  cursorModifiers.forEach(cursorModifier => {
+    cursorModifier.addEventListener('mouseenter', function () {
+      const className = this.getAttribute('cursor-class');
+      cursor.classList.add(className);
+    });
+
+    cursorModifier.addEventListener('mouseleave', function () {
+      const className = this.getAttribute('cursor-class');
+      cursor.classList.remove(className);
+    });
+  });
+}
+
+
+// 모바일 환경일때는 실행 중지
+function checkMobile() {
+  const user = navigator.userAgent;
+  if (user.indexOf("iPhone") > -1 || user.indexOf("Android") > -1) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+
+// 실행
+function cursorLoop() {
+  const isMobile = checkMobile();
+  if (!isMobile) {
+    window.addEventListener('mousemove', updateCoordinates);
+    updateCursor();
+    requestAnimationFrame(cursorLoop);
+  } else {
+    cursor.style.display = 'none';
+  }
+}
+
+requestAnimationFrame(cursorLoop);
+</script>
+
+</body>
+
+</html>
