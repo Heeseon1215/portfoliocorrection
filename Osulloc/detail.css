@@ -22,6 +22,11 @@ header a .main-logo {
       background: url(../images/main_logo_sub1.svg) no-repeat 50% / 100%; 
 }
 
+/* 드래그 */
+html ::selection {
+      background-color: var(--color-sub1-primary);
+}
+
 /* 헤더 색상 변경 */
 header .gnb-btn .line {
       background-color: var(--color-sub1-primary);
@@ -85,6 +90,7 @@ footer {
       height: 95vh;
       grid-template-rows: 2.5fr 1fr;
       position: relative;
+      overflow: hidden;
 }
 
 .project-title .title-wrapper {
@@ -133,7 +139,6 @@ footer {
 /* 프로젝트 이미지 */
 .project-title .title-img {
       position: relative;
-      overflow: hidden;
 }
 
 /* 주변 반짝이 애니메이션 */
@@ -166,38 +171,45 @@ footer {
 }
 
 
+/* 이미지 */
 .project-title .title-img .img-desktop {
-      width: 78%;
+      width: 70vw;
       transition: 0.8s;
-      transform: rotate(10deg) translateY(80px) translateX(20%);
+      transform: rotate(10deg);
       z-index: 1;
       justify-content: center;
+      margin: 0 auto;
+      max-width: 800px;
+
 }
 
 .project-title .title-img .img-desktop:hover {
-      transform:  rotate(-5deg) translateY(60px) translateX(20%); 
+      transform: rotate(10deg) translateY(-10px); 
 }
 .project-title .title-img .img-mobile {
       position: absolute;
-      width: 15%; 
-      top: 60%; left: 10%;
+      width: 10vw; 
+      top: 40%; left: 10%;
       transition: 0.8s;
       transform: rotate(-30deg);
       z-index: 1;
+      min-width: 80px;
+      max-width: 200px;
 }
 
 .project-title .title-img .img-mobile:hover {
-      transform:  rotate(-10deg) translateY(-50px);
+      transform:  rotate(-30deg) translateY(-20px);
       
 }
 
 .project-title .title-img .title-circle {
       background-color: var(--color-sub1-primary);
-      width: 50%; aspect-ratio: 1 / 1;
+      width: 50vw; aspect-ratio: 1 / 1;
       border-radius: 50%;
       position: absolute;
-      top: 50%; left: 50%;
+      top: 30%; left: 50%;
       transform: translate(-50%);
+      max-width: 400px;
 }
 
 
@@ -287,7 +299,23 @@ footer {
       display: grid;
       place-items: center;
       color: var(--color-secondary);
+      font-weight: 600;
+      position: relative;
+      padding-top: 30px;
+
 }
+
+.project-keyword .keyword::after {
+      content: "";
+      background: url(../images/shining-02.svg);
+      width: 20px; height: 20px;
+      top: 35%; left: 50%;
+      transform: translateX(-50%);
+      position: absolute;
+      animation: shin4 infinite linear 3s;
+}
+
+
 .project-keyword .keyword:nth-child(1)  {
       background: linear-gradient(rgba(73, 102, 58, 0.7), rgba(73, 102, 58, 0.7)) ,url(./images/track2.png) no-repeat 50% / cover;
       border-radius: 50%;
@@ -302,6 +330,7 @@ footer {
       border-radius: 50%;
 }
 
+/* 반짝이 이미지 */
 .project-keyword .shining {
       width: 130px; height: 130px;
       background: url(../images/shining-sub1-01-2-01.svg);
@@ -350,6 +379,7 @@ footer {
       align-items: center;
       padding: var(--spacing-sm) 0;
 }
+
 
 
 .project-design .design-typo strong {
@@ -460,6 +490,11 @@ footer {
       text-align: center;
       position: relative;
       overflow: hidden;
+}
+
+.project-pub .pub-wrapper {
+      width: 80vw;
+      margin: 0 auto;
 }
 
 .project-pub .subject {
@@ -591,5 +626,349 @@ footer {
 }
 
 
+@media screen and (min-width : 768px) {
+      .br {
+            display: inline;
+      }
+      .subject {
+            font-size: var(--font-main-title-rg);
+      }
+
+      .project-title {
+            display: flex;
+            justify-content: space-between;
+      }
+
+      /* 타이틀 묶음 수정 */
+      .project-title .title-wrapper {
+            width: 600px;
+            margin-top: auto;
+            margin-bottom: var(--spacing-xlg);
+            min-width: 400px;
+      }
+
+      /* 뒤의 큰 글씨 수정 */
+      .project-title .title-wrapper .title-big {
+            font-size: var(--font-main-title-xxlg);
+            margin-bottom: 105px;
+      }
+
+      
+      /* 이미지 수정 */
+      .project-title .title-img {
+            align-items: center;
+      }
+      .project-title .title-img .img-desktop {
+            width: 60vw;   
+            padding-right: 64px;         
+      }
+      .project-title .title-img .img-mobile {
+            left: 0%;
+      }
+
+      .project-title .title-img .title-circle {
+            max-width: 600px;
+            top: 20%; left: 45%;
+      }
+      
+      .project-title .title-img .title-circle  {
+            padding-right: 64px;   
+      }
+      
+      /* 주변 반짝이 애니메이션 수정 */
+
+      .project-title .title-img .shining {
+            top: 10%; left: -10%;
+      }
+      
+
+      /*******  project-overview *******/
+      .project-overview {
+            text-align: center;
+            padding: var(--spacing-xlg) 64px;
+      }
+
+      .project-overview .subject::before {
+            left: 49.5%;
+      }
+      .project-overview .overview-wrapper p {
+            width: 100%;
+      }
+
+      /*******  project-goal *******/
+      .project-goal  { 
+            padding: var(--spacing-xlg) 64px;
+      }
+      .goal-wrapper .goal  {
+      display: flex;
+      justify-content: space-between;
+      gap: 60px;
+
+      }
+
+      .project-goal .goal-wrapper {
+            width: 80vw;
+            margin: 0 auto;
+      }
+      .project-goal .goal-wrapper .goal {
+            margin: var(--spacing-lg);
+      }
+      .project-goal .goal-wrapper .goal strong {
+            width: 30%;
+      }
+
+      .project-goal .goal-wrapper .goal p {
+            width: 70%;
+            padding: 0;
+            font-size: 16px;
+      }
+
+      .project-goal .goal-wrapper .goal p::before {
+            content: "";
+            width: 0;
+      }
+
+      /*******  project-keyword *******/
+      .project-keyword {
+            padding: var(--spacing-xlg) 64px;
+
+      }
+
+      .project-keyword  .pr-sub {
+            width: 30vw;      
+      }
+
+      .project-keyword .keyword-wrapper {
+            gap: 50px;
+            justify-content: center;
+      }
+      .project-keyword .keyword-wrapper .keyword {
+            font-size: var(--font-main-title-md);
+            max-width: 400px;
+            margin: 0 auto;
+            margin: var(--spacing-xlg) 0;
+      }
+
+      .project-keyword .keyword::after {
+            width: 30px; height: 30px;
+
+      }
 
 
+      /* 반짝이 이미지 */
+      .project-keyword .shining {
+      width: 150px; height: 150px;
+      right: 80px;
+      top: 30%;
+      animation: shin2 10s infinite linear;  
+      }
+
+      .project-keyword .shiningline {
+      width: 60px; height: 60px;
+      left: 10%; bottom: 6%;
+      animation: shin 10s infinite linear ;  
+      }
+
+
+      /*******  DESGIN SYSTEM  *******/
+      .project-design {
+            padding: var(--spacing-xlg) 64px;
+      }
+
+      .project-design .design-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            width: 80vw;
+            margin: var(--spacing-lg) auto;
+      }
+
+      .project-design .design-wrapper h4 {
+           margin: 0;
+            margin-bottom: 20px;
+      }
+
+      .project-design .design-wrapper .design-spacing {
+            grid-row: 2 / 3;
+            align-self: flex-end;
+      }
+
+      .project-design .design-wrapper .design-color {
+            grid-row: 1 / 3;
+      }
+
+      /*******  PUBLISHING *******/
+      .project-pub {
+            padding: var(--spacing-xlg) 64px;
+            background: url(./images/detail-bg.svg) no-repeat 50% / cover ,var(--color-sub1-primary)
+            ;
+      }
+
+      .project-pub .pub-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px 30px ;
+
+      }
+
+      .project-pub .pub-wrapper {
+            margin: var(--spacing-xlg) auto;
+      }
+      .project-pub .pub-wrapper strong {
+            margin: 0 auto;
+            align-self: center;
+            height: 40px;
+            width: 60%;
+            line-height: 30px;
+            position: relative;
+      }
+
+      .project-pub .pub-wrapper strong::after {
+            content: "";
+            position: absolute;
+            top: 20px; right: -30%;
+            width: 50px;
+            border-bottom: 2px var(--color-secondary) dashed;
+      }
+
+      .project-pub .pub-wrapper p {
+           text-align: left;
+           width: 100%;
+           line-height: 40px;
+       }
+ 
+
+       
+/*******  ROBLEM & SOLUTION *******/
+      .project-prso {
+      padding: var(--spacing-rg) 64px;
+      }
+
+      .project-prso .prso {
+            display: flex;
+            width: 80vw;
+            margin: 0 auto;
+            gap: 60px;
+      }
+      .project-prso .prso {
+          
+            padding-top: var(--spacing-xlg);
+
+      }
+      .project-prso .prso img {
+            width: 40%; height: auto;
+            padding-top: var(--spacing-md);
+      }
+      .project-prso .pr-title {
+            padding-top: 0;
+      }
+/******* RESULT *******/
+      .project-result  .review-wrapper {
+            width: 50vw;
+            margin-left: auto;
+            border-bottom: 2px solid var(--color-sub1-primary);
+
+            padding-left: var(--spacing-lg);
+
+            padding-bottom: var(--spacing-sm);
+
+            margin-bottom: var(--spacing-md);
+            position: relative;
+      }
+
+      .project-result  .review-wrapper::before {
+            content: "";
+            position: absolute;
+            left: 0; top: -6px;
+            width: 40px; height: 40px;
+            background: url(./images/detail-shi.svg) no-repeat 50%  / 60%;
+      }
+      .project-result  .review {
+            width: 50vw;
+            margin-left: auto;
+            
+            padding-left: var(--spacing-lg);
+      }
+      .project-result  .review li {
+            margin-bottom: var(--spacing-lg);
+      }
+
+      .project-btn {
+            display: flex;
+            justify-content: end;
+      }
+
+}
+
+
+@media screen and (min-width : 1440px) { 
+      
+
+      .project-title .title-img .img-desktop {
+            padding-right: 128px;         
+      }
+
+      .project-title .title-img .title-circle  {
+            padding-right: 128px;   
+      }
+
+      /*******  project-overview *******/
+      .project-overview {
+            padding: var(--spacing-xlg) 128px;
+      }
+
+      /*******  project-goal *******/
+      .project-goal  { 
+                  padding: var(--spacing-xlg) 128px;
+      }
+
+      .project-goal .goal-wrapper {
+            width: 70vw;
+            margin: 0 auto;
+      }
+
+    /*******  project-keyword *******/
+    .project-keyword {
+      padding: var(--spacing-xlg) 128px;
+
+}
+      /*******  DESGIN SYSTEM  *******/
+      .project-design {
+            padding: var(--spacing-xlg) 128px;
+      }
+
+      .project-design .design-wrapper {
+            width: 60vw;
+      }
+
+      /*******  PUBLISHING *******/
+      .project-pub {
+      padding: var(--spacing-xlg) 128px;
+     
+            }
+
+      /*******  ROBLEM & SOLUTION *******/
+      .project-prso  {
+      padding: var(--spacing-rg) 128px;
+ 
+      }
+
+      .project-prso .prso {
+            width: 60vw;
+
+      }
+      .project-prso .arrow{
+            background: url(../images/line-arrow.svg) no-repeat 50% / 60%;
+       }
+      /******* RESULT *******/
+      .project-result  .review-wrapper {
+            width: 40vw;
+      }
+
+      .project-result  .review {
+            width: 40vw;
+      }
+
+
+
+}

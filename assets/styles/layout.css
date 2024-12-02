@@ -12,7 +12,9 @@ header {
       z-index: 9999;
       justify-content: space-between;
       transition: 0.5s;
+      align-items: center;
 }
+
 header a {
       display: block;
       
@@ -70,7 +72,7 @@ header.toggle-btn {
       align-items: flex-start;
       background-color: var(--color-primary);
       color: var(--color-secondary);
-      position: relative;
+
 }
 
 header.toggle-btn .main-logo {
@@ -115,7 +117,7 @@ footer {
 
 footer .rabbit {
       width: 60px; height: 60px;
-      margin: 0 auto var(--spacing-xlg);
+      margin-left: auto;
 }
 footer .footer-info {
       text-transform: uppercase;
@@ -161,3 +163,19 @@ footer .footer-container {
       white-space: nowrap;
 }
 
+
+
+@media screen and (min-width : 768px) {
+      header {
+            height: 80px;
+      }
+      footer {
+            padding: var(--spacing-xlg) 64px;
+            display: flex;
+      }
+
+}
+
+@media screen and (min-width : 1440px) { 
+      
+}

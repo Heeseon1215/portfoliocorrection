@@ -111,3 +111,32 @@ body {
       background-color: var(--color-secondary);
       color: var(--color-primary);
 }
+
+@media screen and (min-width : 768px) {
+
+
+:root {
+   /* 폰트 크기 */
+ --font-main-title-xxlg : 6.875rem; /*110px*/
+ --font-main-title-xlg : 2.5rem; /*40px*/
+ --font-main-title-lg : 1.875rem; /*30px*/
+ --font-main-title-md : 1.5625rem; /*25px*/
+ --font-main-title-rg : 1.25rem; /*20px*/
+ --font-main-title-sm : 0.75rem; /*12px*/
+
+      }
+
+
+.padding-basic {
+            padding: 0 64px;
+}
+
+
+
+}
+@media screen and (min-width : 1440px) { 
+      .padding-basic {
+            padding: 0 128px;
+}
+
+}
