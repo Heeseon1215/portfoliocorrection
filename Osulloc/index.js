@@ -2,7 +2,7 @@ AOS.init();
 
 
 // a href="#" 속성 없애기
-$('a[href="#"').on('click', function(e){
+$('a[href="#"]').on('click', function(e){
   e.preventDefault()
 });
 
