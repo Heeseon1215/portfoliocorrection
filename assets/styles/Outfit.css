@@ -1,7 +1,79 @@
+@charset "utf-8";
+
+/* Outfit.css */
 @font-face {
-	font-family: 'Outfit Variable';
-	font-weight: 100 900;
+  font-family: 'Outfit';
+  src: local('Outfit Black'),
+  url(../fonts/Outfit-Black.woff2) format('woff2');
+  font-style: normal;
+  font-display: swap;
+  font-weight: 900;
+}
+@font-face {
+	font-family: 'Outfit';
+	src: local('Outfit ExtraBold'),
+	url(../fonts/Outfit-ExtraBold.woff2) format('woff2');
 	font-style: normal;
 	font-display: swap;
-	src: url('../fonts/Outfit-VariableFont_wght.woff2') format('woff2-variations');
+	font-weight: 800;
+    }
+@font-face {
+  font-family: 'Outfit';
+  src: local('Outfit Bold'),
+  url(../fonts/Outfit-Bold.woff2) format('woff2');
+  font-style: normal;
+  font-display: swap;
+  font-weight: 700;
+}
+
+
+@font-face {
+  font-family: 'Outfit';
+  src: local('Outfit SemiBold'),
+  url(../fonts/Outfit-SemiBold.woff2) format('woff2');
+  font-style: normal;
+  font-display: swap;
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Outfit';
+  src: local('Outfit Medium'),
+  url(../fonts/Outfit-Medium.woff2) format('woff2');
+  font-style: normal;
+  font-display: swap;
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'Outfit';
+  src: local('Outfit'),
+  url(../fonts/Outfit-Regular.woff2) format('woff2');
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Outfit';
+  src: local('Outfit Light'),
+  url(../fonts/Outfit-Light.woff2) format('woff2');
+  font-style: normal;
+  font-display: swap;
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'Outfit';
+  src: local('Outfit ExtraLight'),
+  url(../fonts/Outfit-ExtraLight.woff2) format('woff2');
+  font-style: normal;
+  font-display: swap;
+  font-weight: 200;
+}
+@font-face {
+  font-family: 'Outfit';
+  src: local('Outfit Thin'),
+  url(../fonts/Outfit-Thin.woff2) format('woff2');
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100;
 }

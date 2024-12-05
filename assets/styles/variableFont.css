@@ -3,9 +3,6 @@
 /* 'Pretendard Variable' */
 @import url(./pretendardvariable.css);
 
-/* 'Outfit Variable' */
-@import url(./Outfit.css);
-
 
 /* pretendard */
 h2 {
@@ -16,24 +13,3 @@ h2 {
   /* font-variation-settings: 'wght' 120; */
   animation: txt 2s infinite alternate;
 }
-
-/* Outfit */
-h2 {
-  font-family: 'Outfit Variable', sans-serif;
-  font-size: 3rem;
-  font-optical-sizing: auto;
-  /* font-weight: 850; */
-  /* font-variation-settings: 'wght' 120; */
-  animation: txt 2s infinite alternate;
-}
-
-
-@keyframes txt {
-  0% {
-    font-weight: 100;
-  }
-  100% {
-    font-weight: 900;
-  }
-}
-

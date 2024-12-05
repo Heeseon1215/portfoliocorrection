@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 /**** font ****/
-/* font-family: 'Outfit Variable'; */
+/* font-family: 'Outfit'; */
 @import url(../assets/styles/Outfit.css);
 /* font-family: 'Pretendard Variable'; */
 @import url(../assets/styles/pretendardvariable.css);
@@ -12,20 +12,22 @@
   /* 폰트 */
   --font-main-ko: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
 
-  --font-main-en: : "Outfit Variable", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", Arial, serif;
+  --font-main-en: "Outfit", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", Arial, Helvetica, sans-serif;
+
 
   /* 폰트 크기 */
   --font-main-title-xxlg: 31.25rem;/*500px*/
   --font-main-title-xlg: 18.75rem;/*300px*/
   --font-main-title-lg: 10.5rem;/*168px*/
   --font-main-title-md: 4rem;/*64px*/
-  --font-main-title-rg: 2.5rem;/*40px*/
+  --font-main-title-rg: 1.875rem;/*30px*/
   --font-main-title-sm: 1rem;/*16px*/
   --font-main-title-xsm: 0.75rem;/*12px*/
 
   /* 색상 */
   --color-white: #ffffff;
   --color-black: #020202;
+  --color-black2: #828282;
 
   /* border */
   --border-primary: 4px solid var(--color-black);
@@ -52,6 +54,10 @@
 
 .margin-basic {
   margin: 18px;
+}
+
+.padding-basic {
+  padding: 18px;
 }
 
 .title {
@@ -84,12 +90,224 @@ html ::selection {
   background-color:var(--color-black);
   color: var(--color-white);
 }
-/* body {
-  overflow-x: hidden;
-} */
+body {
+  /* overflow-x: hidden; */
+  font-family: var(--font-main-en);
+}
 
 
 /**** css 수정 ****/
+
+/* header */
+/* gnb */
+header nav .gnb {
+  justify-content: space-between;
+  margin-top: var(--spacing-lg);
+  color: white;
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
+  font-size: var(--font-main-title-xsm);
+}
+header nav .gnb li a {
+  display: block;
+  padding: 4px 10px;
+  transition: 0.6s;
+  position: relative;
+}
+
+header nav .gnb li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 100%;  height: 2px;
+  background-color: var(--color-white); 
+  transform-origin: left; 
+  transform: scaleX(0);
+  transition: transform 0.3s ;
+}
+header nav .gnb li a:hover::after {
+  transform: scaleX(1);
+}
+
+
+/* main-intro */
+.main-intro {
+  position: relative;
+  width: 100%;
+  height: 100vh; 
+  overflow: hidden;
+}
+
+.intro-mov video {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%; height: 100%;
+  object-fit: cover; 
+  z-index: 9; 
+  filter: brightness(0.5)
+}
+
+.intro-mov .logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+  z-index: 99; 
+  max-width: 400px; 
+}
+
+.main-intro .intro-icon {
+  width: 60px; height: 25px;
+  position: absolute;
+  bottom: 50px; left: 50%;
+  z-index: 99;
+  background: url(./images/intro-icon.svg) no-repeat 50% / cover;
+  transform: translateX(-50%);
+}
+
+.main-intro .intro-brand {
+  position: absolute;
+  bottom: 20px; left: 50%;
+  z-index: 99;
+  color: var(--color-white);
+  text-align: center;
+  font-size: var(--font-main-title-xsm);
+  transform: translateX(-50%);
+}
+
+
+/* main-word */
+.main-word {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  height: 120vh;
+  position: relative;
+  width: 100%;
+}
+.main-word .word h3 {
+  font-size: clamp(150px, 12vw , 300px) ;
+  line-height:clamp(150px, 12vw , 300px);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: -8px;
+  text-indent: -22px;
+}
+
+.main-word .word .word2 {
+  font-weight: 800;
+  text-transform: uppercase;
+  text-align: right;
+}
+
+.main-word .word .word-info {
+  gap: 30px;
+  font-size: var(--font-main-title-xsm);
+  width: 30%;
+  justify-content: space-between;
+}
+
+.main-word .word .word-info p span {
+  display: block;
+  color: var(--color-black2);
+  font-weight: 600;
+  font-family: var(--font-main-en);
+}
+
+.main-word .word .word-info-2 {
+  justify-content: flex-end;
+  text-align: right;
+  margin-left: auto;
+  justify-content: space-between;
+}
+
+
+/* main-sony  */
+.main-sony  {
+  background-color: var(--color-black);
+  color: var(--color-white);
+}
+
+.main-sony .sony-text {
+  height: 80vh;
+}
+
+.main-sony .sony-text h2 {
+  width: 30vw;
+  font-size: var(--font-main-title-xsm);
+  font-weight: bold;
+}
+.main-sony .sony-text p{
+ font-size: var(--font-main-title-rg);
+ width: 70vw;
+ line-height: 1.7;
+}
+
+.main-sony .sony-img {
+  gap: 10px;
+}
+
+.main-sony .sony-img img {
+  overflow: hidden;
+}
+
+
+
+/* main-create */
+.create {
+  height: 100vh;
+
+}
+.create .title {
+  font-size: 27vw;
+  line-height: 0.8;
+  overflow: hidden;
+  letter-spacing: -20px;
+}
+.create p {
+  padding-top: 20vw;
+  font-weight: bold;
+  text-align: center;
+  font-size: var(--font-main-title-xsm);
+  letter-spacing: 2px;
+}
+
+
+/* main-mov */
+.mov .mov-num {
+  height: 150px;
+  overflow-y: hidden;
+  font-size: 100px;
+  font-weight: bold;
+  justify-content: space-between;
+}
+.mov .mov-num .mov-sec-1 {
+  display: flex;
+}
+
+.mov .mov-num .sec-num {
+  display: flex;
+}
+
+.mov .mov-wrapper {
+  display: flex;
+}
+
+
+
+
+
+
+.tec {
+  overflow-x: hidden;
+}
+.title,
+.create,
+.main-youtube,
+.main-curiosity {
+  overflow-x: hidden;
+}
 
 
 /* footer */
@@ -119,12 +337,6 @@ footer {
   footer h2:hover {
     animation: hover;
   }
-
-  @keyframes hover {
-    0% {}
-    0% {}
-  }
-
 
 
 
