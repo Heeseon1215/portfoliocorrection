@@ -75,6 +75,7 @@
   height: 100%;
   top: 0; left: 0;
   z-index: -1;
+  overflow: hidden;
 
 }
 .location .plus {
@@ -290,6 +291,10 @@ header nav .gnb li a:hover::after {
   display: flex;
 }
 
+.mov-4 {
+  font-family: var(--font-main-ko);
+}
+
 .mov .mov-num .sec-num {
   display: flex;
 }
@@ -340,7 +345,7 @@ header nav .gnb li a:hover::after {
 .mov .mov-wrapper .sub-mov .overlay {
   position: relative;
   height: 85vh;
-  filter: brightness(0.2);
+  filter: brightness(0.5);
 }
 
 
@@ -353,11 +358,19 @@ header nav .gnb li a:hover::after {
   z-index: 9;
 } 
 
-.mov .mov-wrapper .sub-mov .overlay .main-mov iframe {
-  position: absolute;
-  width: 100%; 
-  height: 100%; 
+.mov .mov-wrapper .sub-mov .main-mov {
+  position: relative; 
+  width: 100%;
+  height: 100%;
+  overflow: hidden; 
+}
 
+.mov .mov-wrapper .sub-mov .main-mov video {
+  position: absolute; 
+  top: 50%; left: 50%;
+  width: 100%; height: 100%;
+  object-fit: cover; 
+  transform: translate(-50%, -50%); 
 }
 
 
@@ -405,9 +418,22 @@ header nav .gnb li a:hover::after {
 .mov .mov-wrapper .sub-mov.toggle-btn .mov-info-title  {display: none;}
 
 
+
+/* 애니메이션 */
+.mov .mov-wrapper .sub-mov {
+  position: relative;
+  width: 5%;
+  transition: width 0.4s ease-in-out; /* 부드러운 애니메이션 추가 */
+}
+.mov .mov-wrapper .sub-mov.toggle-btn {
+  width: 80%; 
+}
+
+
+
 /* main-youbue  */
 .main-youtube-text {
-  height: 100vh; position: relative;
+  height:  50vh; position: relative;
   cursor: pointer;
 }
 
@@ -489,7 +515,7 @@ header nav .gnb li a:hover::after {
   position: absolute;
   background:  url("./images/camera.jpg") no-repeat 50% / cover;
   height: 100%; width: 100%;
-  filter: grayscale(1) brightness(0.2);
+  filter: grayscale(1) brightness(0.4);
 }
 
 .camera .camera-info .btn a {
@@ -585,56 +611,190 @@ header nav .gnb li a:hover::after {
 .main-img .img-list .img-info p { 
   color: var(--color-black2);
 }
+
+
 /* .main-productt */
 .main-product {
-
+  height: 50vh; 
+  position: relative;
+  cursor: pointer;
 }
 
+.main-product .product-ani {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: var(--font-main-title-md);
+  text-transform: uppercase;
+  font-weight: bold;
+  height: 90px;
+  line-height: 1.1;
+  overflow: hidden;
 
+  border-top: var(--border-primary);
+  border-bottom: var(--border-primary);
+}
+
+.product-ani  span{
+  transform: translateY(-4rem);
+   transition: 0.6s;
+   display: inline-block;
+}
+
+/* 딜레이 효과 */
+.product-ani  .r {transition-delay : 0.05s;}
+.product-ani  .o {transition-delay : 0.08s;}
+.product-ani  .d {transition-delay : 0.11s;}
+.product-ani .u {transition-delay : 0.14s;}
+.product-ani .c {transition-delay : 0.17s;}
+.product-ani  .t {transition-delay : 0.2s;}
+
+
+
+/* product 애니메이션 */
+.main-product .product-ani:hover .ani-top span{
+  transform: translateY(0.3rem)
+ }
+ .main-product .product-ani:hover .ani-bottom span{
+   transform: translateY(4rem);
+ }
+ 
+ .main-product .product-ani:hover + .location .plus {
+   transform: rotate(180deg);
+ }
+
+
+ 
 /* sony-story */
 .sony-story {
-  height: 100vh;
+  width: 100%;
+  height: 80vh;
+  background-color: var(--color-black);
+  color: white;
+  font-size: var(--font-main-title-rg);
+  display: grid;
+  place-content: center;
+} 
+
+
+/* main-curiosity  */
+
+
+.main-curiosity h2 {
+  font-size: clamp(150px, 19vw , 500px) ;
+  line-height:clamp(150px, 19vw , 500px);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: -8px;
+  text-indent: -22px;
+  text-align: center;
   background-color: var(--color-black);
   color: white;
 }
 
+/* sony-founder */
+.sony-founder ,
+.sony-policy {
+  background-color: var(--color-black);
+  color: white;
+  text-align: center;
+}
+
+
+.sony-founder .sony-text ,
+.sony-policy .sony-text {
+  margin: 0 auto;
+  padding: 80px 0;
+  line-height: 1.6;
+  width: 70%;
+}
+
+
+.sony-founder .sony-text .title-2 ,
+.sony-policy .sony-text .title-2 {
+  padding: 40px 0;
+  font-size: clamp(50px, 15vw , 150px) ;
+  text-align: center;
+  font-weight: 800;
+  margin: 0 auto;
+}
 
 
 
 /* footer */
-footer { 
-  position: relative; 
-  height: 100vh; 
+.footer-sony {
   background-color: var(--color-black); 
   color: white;
-  display: grid;}
+  position: relative; 
+  height: 100vh;
+  cursor: pointer;
+}
 
-  footer .footer-sony  {
-    place-self: center;
+
+  footer .footer-sony   .sony-ani {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
     font-size: var(--font-main-title-md);
     text-transform: uppercase;
+    font-weight: bold;
+    height: 100px;
+    line-height: 1.1;
+    overflow: hidden;
+  
     border-top: var(--border-primary-white);
     border-bottom: var(--border-primary-white);
-    padding-bottom: 8px;
-    display: flex;
-  }
-
-  footer .footer-sony .chr {
-    font-weight: 900;
+    z-index: 99;
   }
 
 
+footer .location {
+  z-index: 9;
+}
 
-  footer h2:hover {
-    animation: hover;
+
+  .sony-ani  span{
+    transform: translateY(-4rem);
+     transition: 0.6s;
+     display: inline-block;
   }
+  
+  /* 딜레이 효과 */
+  .sony-ani  .o {transition-delay : 0.05s;}
+  .sony-ani .n {transition-delay : 0.08s;}
+  .sony-ani  .y {transition-delay : 0.11s;}
 
 
+  
+  /* hover 애니메이션 */
+.sony-ani:hover .ani-top span{
+   transform: translateY(0.3rem)
+  }
+.sony-ani:hover .ani-bottom span{
+    transform: translateY(4rem);
+  }
+  
+ .sony-ani:hover + .location .plus {
+    transform: rotate(180deg);
+    position: absolute;
+  }
+  
 
 
+footer .footer-info {
+  position: absolute;
+  bottom: 0; 
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  display: flex;
+  justify-content: space-around;
+  font-size: var(--font-main-title-xsm);
+}
 
-
-
+footer .footer-info .footer-list {
+  gap: 30px;
+}
 
 
 
