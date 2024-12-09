@@ -107,13 +107,22 @@ body {
 /* gnb */
 header nav .gnb {
   justify-content: space-between;
-  margin-top: var(--spacing-lg);
   color: white;
   position: fixed;
   width: 100%;
   z-index: 9999;
   font-size: var(--font-main-title-xsm);
+  top: 0;
+  left: 0;
+  transition: 0.3s;
+  opacity: 1;
 }
+
+header nav .gnb.hidden {
+  transform: translateY(-100%) ;
+
+}
+
 header nav .gnb li a {
   display: block;
   padding: 4px 10px;
@@ -133,6 +142,12 @@ header nav .gnb li a::after {
 }
 header nav .gnb li a:hover::after {
   transform: scaleX(1);
+}
+
+
+.main-wrapper {
+  background-color: var(--color-black);
+  color: var(--color-white);
 }
 
 
@@ -183,7 +198,38 @@ header nav .gnb li a:hover::after {
 }
 
 
+
 /* main-word */
+.word-wrapper {
+  display: flex;
+  justify-content: end;
+  gap: 20ox;
+}
+
+
+ .vue {
+  position: relative; 
+  width: 200px;
+}
+ .vue .vue-wrapper {
+  position: absolute;
+  width: 180px;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+}
+ .vue .vue-inner {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+
+
+.word .char {
+  display: inline-block; 
+}
+
 .main-word {
   background-color: var(--color-black);
   color: var(--color-white);
@@ -197,8 +243,8 @@ header nav .gnb li a:hover::after {
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: -8px;
-  text-indent: -22px;
 }
+
 
 .main-word .word .word2 {
   font-weight: 800;
@@ -230,12 +276,13 @@ header nav .gnb li a:hover::after {
 
 /* main-sony  */
 .main-sony  {
-  background-color: var(--color-black);
-  color: var(--color-white);
+
+  overflow: hidden;
+  height: 100vh;
 }
 
 .main-sony .sony-text {
-  height: 80vh;
+  height: 70vh;
 }
 
 .main-sony .sony-text h2 {
@@ -251,10 +298,9 @@ header nav .gnb li a:hover::after {
 
 .main-sony .sony-img {
   gap: 10px;
-}
+  flex-wrap: nowrap;
+  width: 120vw;
 
-.main-sony .sony-img img {
-  overflow: hidden;
 }
 
 
