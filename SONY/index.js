@@ -100,34 +100,39 @@ gsap.utils.toArray('.rolled').forEach(txt => {
 });
 
 
-// vue
 
+// vue 애니메이션
 const vueAni = gsap.timeline({
   scrollTrigger: {
     trigger: '.main-word',
     start: '50% 50%',
     end: '700% 700%',
-    scrub: 1 ,
+    scrub: 1,
   },
+});
 
-})
-
-const move = ['.vue .vue-wrapper, .vue .vue-inner' ]
+const move = ['.vue .vue-wrapper', '.vue .vue-inner'];
 
 gsap.utils.toArray(move).forEach((elem, idx) => {
   vueAni.to(
     elem,
     {
-      y: 1200,
+      y: () => {
+        const mainSony = document.querySelector('.main-sony');
+        const mainSonyRect = mainSony.getBoundingClientRect();
+        const elemRect = elem.getBoundingClientRect();
+        return mainSonyRect.top + mainSonyRect.height / 2 - elemRect.top - elemRect.height / 2;
+      },
       rotate: 360,
       ease: "expoScale(0.5,7,none)",
       scale: 0.3,
       duration: 0.5,
-      backgroundColor :' #fff',
+      backgroundColor: '#fff',
     },
     0
-  )
+  );
 });
+
 
 
 // 옆으로 스크롤 되는것처럼 
@@ -165,5 +170,3 @@ gsap.timeline({
   opacity: 1, 
   duration: 1,
 });
-
-
