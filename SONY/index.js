@@ -101,19 +101,19 @@ gsap.utils.toArray('.rolled').forEach(txt => {
 
 
 
-// vue 애니메이션
+// vue 애니메이션 설정
 const vueAni = gsap.timeline({
   scrollTrigger: {
-    trigger: '.main-word',
-    start: '50% 50%',
-    end: '700% 700%',
+    trigger: '.wordsony-wrapper',
+    start: '20% 40%',
+    end: '70% 50%',
     scrub: 1,
   },
 });
 
-const move = ['.vue .vue-wrapper', '.vue .vue-inner'];
+const moveElements = ['.vue .vue-wrapper', '.vue .vue-inner'];
 
-gsap.utils.toArray(move).forEach((elem, idx) => {
+gsap.utils.toArray(moveElements).forEach((elem, idx) => {
   vueAni.to(
     elem,
     {
@@ -123,9 +123,9 @@ gsap.utils.toArray(move).forEach((elem, idx) => {
         const elemRect = elem.getBoundingClientRect();
         return mainSonyRect.top + mainSonyRect.height / 2 - elemRect.top - elemRect.height / 2;
       },
-      rotate: 360,
+      rotate: -360,
       ease: "expoScale(0.5,7,none)",
-      scale: 0.3,
+      scale: 0.1,
       duration: 0.5,
       backgroundColor: '#fff',
     },
@@ -133,40 +133,70 @@ gsap.utils.toArray(move).forEach((elem, idx) => {
   );
 });
 
-
-
-// 옆으로 스크롤 되는것처럼 
-
-const move2 =  ['.vue, .main-sony .sony-img' ]
-
-const metersTitles = gsap.utils.toArray(move2);
-
-metersTitles.forEach(title => {
-  gsap.to(title, {
-    x: (idx, target) => -target.offsetWidth * 0.6,
-    scrollTrigger: {
-      trigger: 'main-sony ',
-      start: '0 100%',
-      end: '100% 0',
-      scrub: 1
-    }
-  });
-});
-
-
-// 화면에 딱 맞게 멈추기
+// main-sony 요소 고정 및 스크롤 애니메이션
 gsap.timeline({
   scrollTrigger: {
     trigger: '.main-sony',
-    start: 'top top', 
-    end: '+=100%', 
-    scrub: true, 
+    start: 'top top',
+    end: '+=100%',
+    scrub: true,
     pin: true,
-    pinSpacing: true, // 고정된 상태에서도 아래 섹션이 밀려서 나타나도록 함
-    zIndex : -1
+    pinSpacing: true,
+  },
+});
+
+// vue를 고정시키고 가로로만 이동
+gsap.timeline({
+  scrollTrigger: {
+    trigger: '.main-sony',
+    start: 'top top',
+    end: 'bottom top',
+    scrub: true,
+    pin: '.vue',
+    pinSpacing: false,
   },
 })
-.to('.main-word', {
-  opacity: 1, 
-  duration: 1,
+.to('.vue', {
+  x: 100, 
+  duration: 20, 
+  scrub: true,
+})
+.to('.vue .vue-wrapper', {
+  scale: '13', 
+  duration: 5, 
+  ease: 'linear', 
+  scrub: true,
 });
+
+
+// sony-img를 반대방향으로 이동
+gsap.timeline({
+  scrollTrigger: {
+    trigger: '.main-sony',
+    start: 'top top',
+    end: 'bottom top',
+    scrub: true,
+  },
+})
+.to('.sony-img', {
+  x: -150, // sony-img는 왼쪽으로 이동
+});
+
+
+
+
+// 이미지가 옆으로 스크롤
+/* const images = gsap.utils.toArray('.sony-img');
+
+images.forEach(title => {
+  gsap.to(title, {
+    x: (idx, target) => -target.offsetWidth * 0.2,
+    scrollTrigger: {
+      trigger: '.main-sony',
+      start: '0 100%',
+      end: '100% 0',
+      scrub: 1,
+    },
+  });
+}); */
+

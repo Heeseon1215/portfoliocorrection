@@ -96,7 +96,7 @@ html ::selection {
   color: var(--color-white);
 }
 body {
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
   font-family: var(--font-main-en);
 }
 
@@ -110,7 +110,7 @@ header nav .gnb {
   color: white;
   position: fixed;
   width: 100%;
-  z-index: 9999;
+  z-index: 99999;
   font-size: var(--font-main-title-xsm);
   top: 0;
   left: 0;
@@ -145,25 +145,29 @@ header nav .gnb li a:hover::after {
 }
 
 
-.main-wrapper {
-  background-color: var(--color-black);
-  color: var(--color-white);
-}
 
 
 /* main-intro */
-.main-intro {
+.main-wrapper {
+  background-color: var(--color-black);
+  color: var(--color-white);
   position: relative;
   width: 100%;
+  height: auto;
+}
+
+.main-intro {
+  position: sticky;
+  top: 0;
+  width: 100%;
   height: 100vh; 
-  overflow: hidden;
 }
 
 .intro-mov video {
   position: absolute;
   top: 50%; left: 50%;
   transform: translate(-50%, -50%);
-  width: 100%; height: 100%;
+  width: 100%; height: 100vh;
   object-fit: cover; 
   z-index: 9; 
   filter: brightness(0.5)
@@ -199,17 +203,25 @@ header nav .gnb li a:hover::after {
 
 
 
+
 /* main-word */
+
+.wordsony-wrapper {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  position: relative;
+}
 .word-wrapper {
   display: flex;
   justify-content: end;
-  gap: 20ox;
+  gap: 20px;
 }
 
 
  .vue {
   position: relative; 
   width: 200px;
+  z-index: 999;
 }
  .vue .vue-wrapper {
   position: absolute;
@@ -222,7 +234,6 @@ header nav .gnb li a:hover::after {
   top: 50%; left: 50%;
   transform: translate(-50%, -50%);
 }
-
 
 
 
@@ -275,8 +286,10 @@ header nav .gnb li a:hover::after {
 
 
 /* main-sony  */
-.main-sony  {
 
+.main-sony  {
+  background-color: var(--color-black);
+  color: #ffffff;
   overflow: hidden;
   height: 100vh;
 }
@@ -308,10 +321,11 @@ header nav .gnb li a:hover::after {
 /* main-create */
 .create {
   height: 100vh;
-
+  position: relative;
+  z-index: 9999;
 }
 .create .title {
-  font-size: 27vw;
+  font-size: clamp(150px, 26vw, 600px) ;
   line-height: 0.8;
   overflow: hidden;
   letter-spacing: -20px;
@@ -479,7 +493,7 @@ header nav .gnb li a:hover::after {
 
 /* main-youbue  */
 .main-youtube-text {
-  height:  50vh; position: relative;
+  height:  70vh; position: relative;
   cursor: pointer;
 }
 
@@ -661,7 +675,7 @@ header nav .gnb li a:hover::after {
 
 /* .main-productt */
 .main-product {
-  height: 50vh; 
+  height: 70vh; 
   position: relative;
   cursor: pointer;
 }
