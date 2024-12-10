@@ -323,13 +323,27 @@ header nav .gnb li a:hover::after {
   height: 100vh;
   position: relative;
   z-index: 9999;
+
+}
+.create .cr-title-wrapper {
+  height: clamp(150px, 25vw, 600px);
+  line-height: clamp(150px, 25vw, 600px);
+  overflow: hidden;
+  padding: 5vw 0;
 }
 .create .title {
-  font-size: clamp(150px, 26vw, 600px) ;
+  display: flex;
+  font-size: clamp(150px, 25vw, 600px);
   line-height: 0.8;
-  overflow: hidden;
   letter-spacing: -20px;
+  justify-content: center;
 }
+
+.create .title-up span {
+  display: inline-block;
+  transform: translateY(-100%);
+}
+
 .create p {
   padding-top: 20vh;
   font-weight: bold;
@@ -340,6 +354,9 @@ header nav .gnb li a:hover::after {
 
 
 /* main-mov */
+.mov {
+  margin: 0 auto;
+}
 .mov .mov-num {
   height: 150px;
   overflow-y: hidden;
